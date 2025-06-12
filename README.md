@@ -42,6 +42,7 @@ If you'd like to understand how this works in detail, please check out [this blo
    - See [VS Code Copilot MCP Servers](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
 
 4. **Install MCP client tools locally** if you invoke the MCP server with `uv run mcp` as above.
+   - Use ```uv add "mcp[cli]"``` or ```pip install "mcp[cli]"```
 
 ## Docker Support
 
