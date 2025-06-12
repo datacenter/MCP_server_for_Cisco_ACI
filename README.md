@@ -1,34 +1,50 @@
-This is a simple MCP (Model Context Protocol) that interacts with a Cisco APIC controller.
-It's been tested with Claude Desktop and Visual Studio Code in Agent mode with CoPilot.
-The server runs in STDIO mode which means it's meant to run locally on your computer.
+# MCP (Model Context Protocol) for Cisco APIC
 
-It exposes two tools that are self-explanatory, just inspect main.py to find out.
+This project provides a simple MCP (Model Context Protocol) server that interacts with a Cisco APIC controller.
+If you'd like to understand how this works in detail, please check out [this blog post](https://medium.com/@cpaggen/putting-ai-to-work-with-your-cisco-application-centric-infrastructure-fabric-a-mcp-server-for-aci-838e6fe62022)
 
-Specify your APIC credentials in the .env file then register the MCP server with Claude or VS Code.
-To do so, create a mcp.json file such as this one:
+- Tested with **Claude Desktop** and **Visual Studio Code** in Agent mode with Copilot.
+- The server runs in **STDIO mode**, intended for local execution.
 
-```
-{
-  "servers": {
-    "ciscoApicServer": {
-      "type": "stdio",
-      "command": "C:\\Users\\cpaggen\\.local\\bin\\uv.EXE",
-      "args": [
-        "run",
-        "--with",
-        "mcp[cli]",
-        "mcp",
-        "run",
-        "C:\\MCP\\app\\main.py"
-      ]
-    }
-  }
-}
+## Features
 
-and instruct Claude Desktop or VS Code to use it (see the documentation, it's quite straightforward)
-Make sure you install the MCP client tools locally if you decide to invoke the MCP server with "uv run mcp" as shown above.
+- Exposes two tools for APIC interaction (see `app/main.py` for details).
+- Easily configurable via environment variables.
 
-Note that you run the server directly using UV, or you can build a Docker image and run it as a container.
-In that case, you'll need to adapt the mcp.json config accordingly.
+## Setup
 
-Local installation of MCP client tools is recommended for debugging the server code.
+1. **Specify APIC credentials** in the `.env` file.
+2. **Register the MCP server** with Claude or VS Code.
+
+   Create a `mcp.json` file like this:
+
+   ```json
+   {
+     "servers": {
+       "ciscoApicServer": {
+         "type": "stdio",
+         "command": "C:\\Users\\cpaggen\\.local\\bin\\uv.EXE",
+         "args": [
+           "run",
+           "--with",
+           "mcp[cli]",
+           "mcp",
+           "run",
+           "C:\\MCP\\app\\main.py"
+         ]
+       }
+     }
+   }
+   ```
+
+3. Instruct Claude Desktop or VS Code to use it
+    a. See https://modelcontextprotocol.io/quickstart/user for Claude Desktop
+    b. See https://code.visualstudio.com/docs/copilot/chat/mcp-servers for Visual Studio Code
+
+4. **Install MCP client tools locally** if you invoke the MCP server with `uv run mcp` as above.
+
+## Docker Support
+
+You can run the server directly using UV, or build a Docker image and run it as a container. If using Docker, adapt the `mcp.json` config accordingly.
+
+> **Note:** Local installation of MCP client tools is recommended for debugging the server code.
