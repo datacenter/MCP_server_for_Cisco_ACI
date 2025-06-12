@@ -49,3 +49,21 @@ If you'd like to understand how this works in detail, please check out [this blo
 You can run the server directly using UV, or build a Docker image and run it as a container. If using Docker, adapt the `mcp.json` config accordingly.
 
 > **Note:** Local installation of MCP client tools is recommended for debugging the server code.
+
+## Screenshots
+
+Below are some screenshots demonstrating the MCP server in action and its integration with Claude Desktop and VS Code:
+
+| MCP Server Registered | Tool Registered in Claude | Claude Tools List |
+|----------------------|--------------------------|------------------|
+| ![MCP Server Registered](screenshots/01a-mcp_server_registered.png) | ![Tool Registered in Claude](screenshots/01b-tool_registered_in_claude.png) | ![Claude Tools List](screenshots/01c-claude_tools_list.png) |
+
+| MCP Server Output | Sample Question in VS Code | Sample Question in Claude |
+|-------------------|---------------------------|--------------------------|
+| ![MCP Server Output](screenshots/02-mcp_server_output.png) | ![Sample Question VS Code](screenshots/03a-sample_question_vscode.png) | ![Sample Claude Question](screenshots/03b-sample_claude_question.png) |
+
+| How to Use ACI Backup |
+|----------------------|
+| ![How to Use ACI Backup](screenshots/04-how_to_use_aci_backup.png) |
+
+These images illustrate the registration process, available tools, and example interactions.
