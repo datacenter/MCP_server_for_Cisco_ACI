@@ -1,0 +1,17 @@
+{
+  "servers": {
+    "ciscoApicServer": {
+      "type": "stdio",
+      "command": "C:\\Users\\cpaggen\\.local\\bin\\uv.EXE",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "C:\\MCP\\app\\main.py"
+      ]
+      ]
+    }
+  }
+}
