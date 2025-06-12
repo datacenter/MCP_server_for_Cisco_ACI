@@ -37,9 +37,9 @@ If you'd like to understand how this works in detail, please check out [this blo
    }
    ```
 
-3. Instruct Claude Desktop or VS Code to use it
-    a. See https://modelcontextprotocol.io/quickstart/user for Claude Desktop
-    b. See https://code.visualstudio.com/docs/copilot/chat/mcp-servers for Visual Studio Code
+3. Instruct Claude Desktop or VS Code to use it:
+   - See [Claude Desktop Quickstart](https://modelcontextprotocol.io/quickstart/user)
+   - See [VS Code Copilot MCP Servers](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
 
 4. **Install MCP client tools locally** if you invoke the MCP server with `uv run mcp` as above.
 
