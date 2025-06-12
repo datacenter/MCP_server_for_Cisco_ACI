@@ -14,9 +14,10 @@ If you'd like to understand how this works in detail, please check out [this blo
 ## Setup
 
 1. **Specify APIC credentials** in the `.env` file.
-2. **Register the MCP server** with Claude or VS Code.
+2. If you want Claude or VS Code to run the Python code directly (no container), install [UV](https://docs.astral.sh/uv/)
+3. **Register the MCP server** with Claude or VS Code.
 
-   Create a `mcp.json` file like this:
+   For VS Code, create a `.vscode/mcp.json` file like this in your workspace:
 
    ```json
    {
