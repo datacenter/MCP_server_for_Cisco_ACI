@@ -1,3 +1,9 @@
 mcp
 httpx
 dotenv
+pydantic
+logging
+asyncio
+os
+json
+typing
